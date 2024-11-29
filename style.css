@@ -1,0 +1,155 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* Fixed typo: `border-box` to `box-sizing: border-box` */
+    text-align: center;
+    align-items: center;
+}
+
+header {
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(17, 61, 142);
+    text-align: center;
+    line-height: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.25em;
+    color: white;
+}
+
+.body-of-game {
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.game_body {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 2em;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    /* Allow items to wrap for smaller screens */
+}
+
+.game {
+    height: 6em;
+    width: 6em;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.game p {
+    font-size: 4em;
+}
+
+#rock {
+    background-color: mediumaquamarine;
+}
+
+#paper {
+    background-color: rgb(40, 99, 182);
+}
+
+#scissors {
+    background-color: rgb(174, 54, 217);
+}
+
+.score-board {
+    margin-top: 2.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-self: center;
+}
+
+#user-score,
+#comp-score {
+    font-size: 1.75em;
+}
+
+.result {
+    margin-top: 2em;
+}
+
+#message {
+    background-color: rgb(47, 4, 126, 0.85);
+    font-size: 2em;
+    display: inline;
+    border-radius: 8px;
+    color: white;
+    padding: 0.15em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .game_body {
+        gap: 1em;
+        /* Reduce gap on smaller screens */
+    }
+
+    .game {
+        height: 4em;
+        width: 4em;
+    }
+
+    .game p {
+        font-size: 2em;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 1.5em;
+    }
+
+    header {
+        font-size: 1.75em;
+    }
+
+    #message {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .game_body {
+        flex-direction: column;
+        /* Stack the buttons on top of each other for very small screens */
+        gap: 0.5em;
+    }
+
+    .game {
+        height: 3em;
+        width: 3em;
+    }
+
+    .game p {
+        font-size: 1.5em;
+    }
+
+    header {
+        font-size: 1.5em;
+    }
+
+    .score-board {
+        font-size: 1.25em;
+    }
+
+    #message {
+        font-size: 1.25em;
+    }
+}

@@ -51,8 +51,10 @@ header {
     cursor: pointer;
 }
 
-.game p {
-    font-size: 4em;
+#para {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
 }
 
 #rock {
@@ -75,6 +77,16 @@ header {
     justify-content: center;
     gap: 1em;
     align-self: center;
+}
+
+.score {
+    height: 5em;
+    width: 5em;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding-top: 1em;
+    ;
 }
 
 #user-score,
@@ -152,4 +164,8 @@ header {
     #message {
         font-size: 1.25em;
     }
+}
+
+.hidden {
+    display: none;
 }

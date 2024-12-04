@@ -10,8 +10,8 @@ const compScorePara = document.querySelector("#comp-score");
 function showdraw() {
     message.innerText = "This is Draw";
     message.style.backgroundColor = "rgb(47, 4, 126, 0.85)";
-    userScore++;
-    compScore++;
+    // userScore++;
+    // compScore++;
 }
 
 // showWin function
